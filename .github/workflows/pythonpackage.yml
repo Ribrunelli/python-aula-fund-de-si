@@ -1,0 +1,29 @@
+maior_50 = 0
+pessoas_10_20 = 0
+soma_alturas_1020 = 0
+peso_inferior40 = 0
+
+for c in range(30):
+    idade= int(input('Idade: '))
+    altura= float(input('Altura: '))
+    peso= float(input('Peso: '))
+    if idade > 50:
+        maior_50 += 1
+        if peso < 40:
+            peso_inferior40 += 1
+            print('Proxima pessoa...')
+        else:
+            print('Proxima pessoa...')
+    elif idade > 10 and idade < 20:
+        pessoas_10_20 += 1
+        soma_alturas_1020 += altura
+        if peso < 40:
+            peso_inferior40 += 1
+            print('Proxima pessoa...')
+        else:
+            print('Proxima pessoa...')
+    else:
+        print('Proxima pessoa...')
+print('Número de pessoas com mais de 50 anos: ', maior_50)
+print('A media das alturas das pessoas entre 10 e 20 anos é: ', soma_alturas_1020/pessoas_10_20)
+print('Das pessoas analisadas a porcentagem de pessoas com peso inferior a 40 quilos é de',(peso_inferior40*100)/30 ,'%')
